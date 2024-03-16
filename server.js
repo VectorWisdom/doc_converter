@@ -18,11 +18,11 @@ app.post('/convert', upload.single('document'), async (req, res) => {
 
   const inputPath = req.file.path;
   console.log(`existsSync inputPath : ${fs.existsSync(inputPath)}`)
-  const outputPath = path.join('converted', `${req.file.filename}.svg`);
+  const outputPath = path.join('converted', `${req.file.filename}.png`);
 
   try {
     // Command to convert DOCX/PPTX to SVG using LibreOffice
-    const { stdout, stderr } = await execAsync(`libreoffice --headless --convert-to svg ${inputPath} --outdir converted`);
+    const { stdout, stderr } = await execAsync(`libreoffice --headless --convert-to png ${inputPath} --outdir converted`);
     console.log('stdout:', stdout);
     console.error('stderr:', stderr);
 

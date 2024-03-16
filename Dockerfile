@@ -9,6 +9,9 @@ RUN npm install -g pnpm
 # Create app directory
 WORKDIR /usr/src/app
 
+# Ensure directories exist and have correct permissions
+RUN mkdir -p ./uploads ./converted && chmod 777 ./uploads ./converted
+
 # Install app dependencies
 COPY package.json ./
 RUN pnpm install
