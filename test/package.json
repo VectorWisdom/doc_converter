@@ -1,0 +1,17 @@
+{
+    "name": "test",
+    "version": "1.0.0",
+    "description": "Test scripts for DOCX and PPTX to SVG conversion",
+    "type": "module",
+    "main": "test.js",
+    "scripts": {
+      "test": "node test.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^0.27.2",
+      "form-data": "^4.0.0"
+    }
+  }
+  
